@@ -1,0 +1,11 @@
+﻿  MyForm.cpp
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(469): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(665): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(713): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(714): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(715): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(742): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(743): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(744): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+d:\dctenxen0621\data\school\107-1_image_processing\project1\project1\myform.h(805): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+  Project1.vcxproj -> D:\DcTenXen0621\Data\School\107-1_Image_Processing\Project1\Release\Project1.exe
