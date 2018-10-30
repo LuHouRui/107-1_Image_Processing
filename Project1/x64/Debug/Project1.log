@@ -1,1 +1,3 @@
-﻿  Project1.vcxproj -> D:\DcTenXen0621\Data\School\107-1_Image_Processing\Github\x64\Debug\Project1.exe
+﻿  MyForm.cpp
+  MyForm.obj : 發現 MSIL 模組。MSIL 的累加連結已停用。正在執行完整連結
+  Project1.vcxproj -> D:\DcTenXen0621\Data\School\107-1_Image_Processing\Github\x64\Debug\Project1.exe

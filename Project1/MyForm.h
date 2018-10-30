@@ -83,16 +83,21 @@ namespace Project1 {
 
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown2;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown3;
-	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label2;
 
 
 
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Label^  label4;
+
+
+
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Label^  label6;
+
+
+	private: System::Windows::Forms::StatusStrip^  statusStrip1;
+	private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel1;
+	private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel2;
+	private: System::Windows::Forms::Button^  Stretch_button;
+	private: System::Windows::Forms::Button^  Shrinking_button;
 
 
 
@@ -121,23 +126,25 @@ namespace Project1 {
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown3 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
+			this->toolStripStatusLabel1 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->toolStripStatusLabel2 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->Stretch_button = (gcnew System::Windows::Forms::Button());
+			this->Shrinking_button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->statusStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(9, 12);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(130, 50);
@@ -148,6 +155,8 @@ namespace Project1 {
 			// 
 			// button2
 			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(145, 12);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(130, 50);
@@ -158,6 +167,8 @@ namespace Project1 {
 			// 
 			// button3
 			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button3->Location = System::Drawing::Point(281, 12);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(130, 50);
@@ -168,6 +179,8 @@ namespace Project1 {
 			// 
 			// button4
 			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button4->Location = System::Drawing::Point(417, 12);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(130, 50);
@@ -178,6 +191,8 @@ namespace Project1 {
 			// 
 			// button5
 			// 
+			this->button5->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button5->Location = System::Drawing::Point(553, 12);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(130, 50);
@@ -188,6 +203,8 @@ namespace Project1 {
 			// 
 			// button6
 			// 
+			this->button6->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button6->Location = System::Drawing::Point(689, 12);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(130, 25);
@@ -200,10 +217,10 @@ namespace Project1 {
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox2->Location = System::Drawing::Point(689, 444);
+			this->pictureBox2->Location = System::Drawing::Point(689, 446);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(322, 242);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 13;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -211,10 +228,10 @@ namespace Project1 {
 			// 
 			this->pictureBox3->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox3->Location = System::Drawing::Point(689, 120);
+			this->pictureBox3->Location = System::Drawing::Point(689, 122);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(322, 242);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 14;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -224,6 +241,8 @@ namespace Project1 {
 			// 
 			// button7
 			// 
+			this->button7->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button7->Location = System::Drawing::Point(825, 12);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(130, 50);
@@ -242,6 +261,8 @@ namespace Project1 {
 			// 
 			// button8
 			// 
+			this->button8->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button8->Location = System::Drawing::Point(10, 68);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(130, 25);
@@ -252,6 +273,8 @@ namespace Project1 {
 			// 
 			// button9
 			// 
+			this->button9->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button9->Location = System::Drawing::Point(145, 68);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(130, 25);
@@ -280,46 +303,6 @@ namespace Project1 {
 			this->numericUpDown3->TabIndex = 21;
 			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
-			// label1
-			// 
-			this->label1->AllowDrop = true;
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"新細明體", 16));
-			this->label1->Location = System::Drawing::Point(533, 70);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(0, 22);
-			this->label1->TabIndex = 22;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"新細明體", 16));
-			this->label2->Location = System::Drawing::Point(416, 88);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(31, 22);
-			this->label2->TabIndex = 23;
-			this->label2->Text = L"Y:";
-			// 
-			// label3
-			// 
-			this->label3->AllowDrop = true;
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"新細明體", 16));
-			this->label3->Location = System::Drawing::Point(416, 66);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(31, 22);
-			this->label3->TabIndex = 29;
-			this->label3->Text = L"X:";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"新細明體", 16));
-			this->label4->Location = System::Drawing::Point(533, 88);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(0, 22);
-			this->label4->TabIndex = 30;
-			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Gray;
@@ -335,25 +318,53 @@ namespace Project1 {
 			this->pictureBox1->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
 			this->pictureBox1->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseUp);
 			// 
-			// label5
+			// statusStrip1
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"新細明體", 24));
-			this->label5->Location = System::Drawing::Point(693, 409);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(273, 32);
-			this->label5->TabIndex = 31;
-			this->label5->Text = L"Bilinear-Interpolation";
+			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->toolStripStatusLabel1,
+					this->toolStripStatusLabel2
+			});
+			this->statusStrip1->Location = System::Drawing::Point(0, 691);
+			this->statusStrip1->Name = L"statusStrip1";
+			this->statusStrip1->Size = System::Drawing::Size(1407, 22);
+			this->statusStrip1->TabIndex = 33;
+			this->statusStrip1->Text = L"statusStrip1";
 			// 
-			// label6
+			// toolStripStatusLabel1
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"新細明體", 24));
-			this->label6->Location = System::Drawing::Point(693, 87);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(140, 32);
-			this->label6->TabIndex = 32;
-			this->label6->Text = L"FirstOrder";
+			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(62, 17);
+			this->toolStripStatusLabel1->Text = L"StartPoint";
+			// 
+			// toolStripStatusLabel2
+			// 
+			this->toolStripStatusLabel2->Name = L"toolStripStatusLabel2";
+			this->toolStripStatusLabel2->Size = System::Drawing::Size(58, 17);
+			this->toolStripStatusLabel2->Text = L"EndPoint";
+			// 
+			// Stretch_button
+			// 
+			this->Stretch_button->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Stretch_button->Location = System::Drawing::Point(281, 68);
+			this->Stretch_button->Name = L"Stretch_button";
+			this->Stretch_button->Size = System::Drawing::Size(130, 50);
+			this->Stretch_button->TabIndex = 34;
+			this->Stretch_button->Text = L"Stretch";
+			this->Stretch_button->UseVisualStyleBackColor = true;
+			this->Stretch_button->Click += gcnew System::EventHandler(this, &MyForm::Stretch_button_Click);
+			// 
+			// Shrinking_button
+			// 
+			this->Shrinking_button->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Shrinking_button->Location = System::Drawing::Point(417, 68);
+			this->Shrinking_button->Name = L"Shrinking_button";
+			this->Shrinking_button->Size = System::Drawing::Size(130, 50);
+			this->Shrinking_button->TabIndex = 35;
+			this->Shrinking_button->Text = L"Shrinking";
+			this->Shrinking_button->UseVisualStyleBackColor = true;
+			this->Shrinking_button->Click += gcnew System::EventHandler(this, &MyForm::Shrinking_button_Click);
 			// 
 			// MyForm
 			// 
@@ -365,14 +376,11 @@ namespace Project1 {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1407, 713);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label5);
+			this->Controls->Add(this->Shrinking_button);
+			this->Controls->Add(this->Stretch_button);
+			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->numericUpDown3);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->button9);
@@ -397,6 +405,8 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->statusStrip1->ResumeLayout(false);
+			this->statusStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -879,8 +889,7 @@ private: System::Void MyForm_MouseDown(System::Object^  sender, System::Windows:
 	{
 		SetCursor = true;
 		StartPnt = e->Location;
-		label3->Text = StartPnt.X.ToString();
-		label2->Text = StartPnt.Y.ToString();
+		toolStripStatusLabel1->Text = "StartPoint( " + e->X.ToString() + " ," + e->Y.ToString()+")";
 		Select = true;
 	}
 }
@@ -897,8 +906,7 @@ private: System::Void MyForm_MouseMove(System::Object^  sender, System::Windows:
 		else	
 			obj->DrawRectangle(White, Rect);	
 		Rect = Rectangle(StartPnt.X, StartPnt.Y, e->X-StartPnt.X, e->Y-StartPnt.Y);
-		label1->Text = e->Location.X.ToString();
-		label4->Text = e->Location.Y.ToString();
+		toolStripStatusLabel2->Text = "EndPoint:( " + e->X.ToString() + " ," + e->Y.ToString() + ")";
 		EndPnt = e->Location;
 		obj->DrawRectangle(Red, Rect);
 	}
@@ -907,8 +915,7 @@ private: System::Void MyForm_MouseMove(System::Object^  sender, System::Windows:
 
 private: System::Void MyForm_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 	if (SetCursor) {
-		label1->Text = EndPnt.X.ToString();
-		label4->Text = EndPnt.Y.ToString();
+		toolStripStatusLabel2->Text = "EndPoint:( " + e->X.ToString() + " ," + e->Y.ToString() + ")";
 		SetCursor = false;
 	}
 }
@@ -920,6 +927,104 @@ private: System::Void pictureBox1_Paint(System::Object^  sender, System::Windows
 	OnPaint(e);
 }
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void Stretch_button_Click(System::Object^  sender, System::EventArgs^  e) {
+	//Stretch
+	ImageData1 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資料的最前面位置
+	IntPtr ptr = ImageData1->Scan0;
+	BytesOfSkip = ImageData1->Stride - ByteNumber_Width;
+	//設定參數
+	int smax = 255;
+	int smin = 0;
+	int rmax = 0, rmin = 255;
+	int pixel;
+	//將p歸位置Image1的初始位置
+	p = (Byte*)((Void*)ptr);
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++) 
+		{
+			pixel = (int)p[0];
+			//計算rmax,rmin
+			if (pixel > rmax) {
+				rmax = pixel;
+			}
+			else if(pixel<=rmin) {
+				rmin = pixel;
+			}
+			p += 3;
+		}
+	}
+	//將p歸位置Image1的初始位置
+	p = (Byte*)((Void*)ptr);
+	//巡迴每一像素
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			//像素值填入
+			int r = p[0];
+			int pixel = ((r - rmin)*(smax - smin)) / (rmax - rmin) + smin;
+			p[0] = (Byte)(pixel);
+			p[1] = (Byte)(pixel);
+			p[2] = (Byte)(pixel);
+			p += 3;
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData1);
+	//將影像顯示在pictureBox2
+	pictureBox2->Image = Image1;
+}
+private: System::Void Shrinking_button_Click(System::Object^  sender, System::EventArgs^  e) {
+	//Stretch
+	ImageData1 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資料的最前面位置
+	IntPtr ptr = ImageData1->Scan0;
+	BytesOfSkip = ImageData1->Stride - ByteNumber_Width;
+	//設定參數
+	int smax = 150;
+	int smin = 100;
+	int rmax = 0, rmin = 255;
+	int pixel;
+	//將p歸位置Image1的初始位置
+	p = (Byte*)((Void*)ptr);
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			pixel = (int)p[0];
+			//計算rmax,rmin
+			if (pixel > rmax) {
+				rmax = pixel;
+			}
+			else if (pixel <= rmin) {
+				rmin = pixel;
+			}
+			p += 3;
+		}
+	}
+	//將p歸位置Image1的初始位置
+	p = (Byte*)((Void*)ptr);
+	//巡迴每一像素
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			//像素值填入
+			int r = p[0];
+			int pixel = ((r - rmin)*(smax - smin)) / (rmax - rmin) + smin;
+			p[0] = (Byte)(pixel);
+			p[1] = (Byte)(pixel);
+			p[2] = (Byte)(pixel);
+			p += 3;
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData1);
+	//將影像顯示在pictureBox3
+	pictureBox3->Image = Image1;
 }
 };
 }
