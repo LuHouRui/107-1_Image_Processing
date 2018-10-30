@@ -168,7 +168,7 @@ namespace Project1 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(553, 12);
+			this->button4->Location = System::Drawing::Point(417, 12);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(130, 50);
 			this->button4->TabIndex = 10;
@@ -178,7 +178,7 @@ namespace Project1 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(689, 12);
+			this->button5->Location = System::Drawing::Point(553, 12);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(130, 50);
 			this->button5->TabIndex = 11;
@@ -188,7 +188,7 @@ namespace Project1 {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(825, 12);
+			this->button6->Location = System::Drawing::Point(689, 12);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(130, 25);
 			this->button6->TabIndex = 12;
@@ -224,7 +224,7 @@ namespace Project1 {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(417, 12);
+			this->button7->Location = System::Drawing::Point(825, 12);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(130, 50);
 			this->button7->TabIndex = 15;
@@ -235,7 +235,7 @@ namespace Project1 {
 			// numericUpDown1
 			// 
 			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
-			this->numericUpDown1->Location = System::Drawing::Point(825, 40);
+			this->numericUpDown1->Location = System::Drawing::Point(689, 40);
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(130, 22);
 			this->numericUpDown1->TabIndex = 16;
