@@ -1,7 +1,7 @@
 #pragma once
 #include<math.h>
+#include<vector>
 namespace Project1 {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -98,6 +98,9 @@ namespace Project1 {
 	private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel2;
 	private: System::Windows::Forms::Button^  Stretch_button;
 	private: System::Windows::Forms::Button^  Shrinking_button;
+	private: System::Windows::Forms::Button^  button10;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown4;
+	private: System::Windows::Forms::Button^  button11;
 
 
 
@@ -132,6 +135,9 @@ namespace Project1 {
 			this->toolStripStatusLabel2 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->Stretch_button = (gcnew System::Windows::Forms::Button());
 			this->Shrinking_button = (gcnew System::Windows::Forms::Button());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->numericUpDown4 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->button11 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
@@ -139,6 +145,7 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->statusStrip1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -217,7 +224,7 @@ namespace Project1 {
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox2->Location = System::Drawing::Point(689, 446);
+			this->pictureBox2->Location = System::Drawing::Point(338, 122);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(322, 242);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -228,7 +235,7 @@ namespace Project1 {
 			// 
 			this->pictureBox3->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox3->Location = System::Drawing::Point(689, 122);
+			this->pictureBox3->Location = System::Drawing::Point(666, 122);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(322, 242);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -310,7 +317,7 @@ namespace Project1 {
 			this->pictureBox1->Location = System::Drawing::Point(10, 122);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(322, 242);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 7;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::pictureBox1_Paint);
@@ -366,16 +373,52 @@ namespace Project1 {
 			this->Shrinking_button->UseVisualStyleBackColor = true;
 			this->Shrinking_button->Click += gcnew System::EventHandler(this, &MyForm::Shrinking_button_Click);
 			// 
+			// button10
+			// 
+			this->button10->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button10->Location = System::Drawing::Point(553, 68);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(130, 50);
+			this->button10->TabIndex = 36;
+			this->button10->Text = L"Histogram equalization";
+			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
+			// 
+			// numericUpDown4
+			// 
+			this->numericUpDown4->DecimalPlaces = 3;
+			this->numericUpDown4->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
+			this->numericUpDown4->Location = System::Drawing::Point(689, 96);
+			this->numericUpDown4->Name = L"numericUpDown4";
+			this->numericUpDown4->Size = System::Drawing::Size(130, 22);
+			this->numericUpDown4->TabIndex = 38;
+			this->numericUpDown4->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// button11
+			// 
+			this->button11->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button11->Location = System::Drawing::Point(689, 68);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(130, 25);
+			this->button11->TabIndex = 37;
+			this->button11->Text = L"Histogram equalization(S)";
+			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->AutoValidate = System::Windows::Forms::AutoValidate::EnableAllowFocusChange;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1407, 713);
+			this->Controls->Add(this->numericUpDown4);
+			this->Controls->Add(this->button11);
+			this->Controls->Add(this->button10);
 			this->Controls->Add(this->Shrinking_button);
 			this->Controls->Add(this->Stretch_button);
 			this->Controls->Add(this->statusStrip1);
@@ -407,6 +450,7 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->statusStrip1->ResumeLayout(false);
 			this->statusStrip1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -480,7 +524,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 		//Unlock處理完畢的像素範圍
 		Image1->UnlockBits(ImageData1);
 		//將影像顯示在pictureBox1
-		pictureBox1->Image = Image1;
+		pictureBox2->Image = Image1;
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) 
 	{
@@ -550,8 +594,8 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 	}
 	//Unlock處理完畢的像素範圍
 	Image1->UnlockBits(ImageData1);
-	//將影像顯示在pictureBox1
-	pictureBox1->Image = Image1;
+	//將影像顯示在pictureBox2
+	pictureBox2->Image = Image1;
 	}
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) 
 	{
@@ -1025,6 +1069,126 @@ private: System::Void Shrinking_button_Click(System::Object^  sender, System::Ev
 	Image1->UnlockBits(ImageData1);
 	//將影像顯示在pictureBox3
 	pictureBox3->Image = Image1;
+}
+private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
+	//equalization
+	ImageData1 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資料的最前面位置
+	IntPtr ptr = ImageData1->Scan0;
+	BytesOfSkip = ImageData1->Stride - ByteNumber_Width;
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	int r[256] = { 0 };
+	int s[256] = { 0 };
+	int pixelcount = 0;
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++) 
+		{
+			int pixel = p[0] * 0.114 + p[1] * 0.587 + p[2] * 0.299;
+			r[pixel] +=1;
+			pixelcount++;
+			p += 3;
+		}
+	}
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	//正規過程
+	int total = 0;
+	for (int y = 0; y < 256; y++) {
+		total += r[y];
+		s[y] = (total * 255) / pixelcount;
+	}
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			//像素質填入
+			int pixel;
+			pixel = s[p[0]];
+			p[0] = (Byte)(pixel);
+			p[1] = (Byte)(pixel);
+			p[2] = (Byte)(pixel);
+			p += 3;
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData1);
+	//將影像顯示在pictureBox2
+	pictureBox3->Image = Image1;
+}
+private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
+	//equalization
+	Byte* Reg_p;
+	ImageData2 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資料的最前面位置
+	IntPtr ptr = ImageData2->Scan0;
+	BytesOfSkip = ImageData2->Stride - ByteNumber_Width;
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	float side = (float)numericUpDown4->Value;
+	int overside = 3;
+	Byte* reg;
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			Byte* pre_p = p;
+			reg = p;
+			//巡迴每一像素
+			if (x < overside || y<overside || x>Image1->Width - overside || y>Image1->Height - overside) {
+				int pixel = 0;
+				reg[0] = pixel;
+				reg += 3;
+			}
+			else
+			{
+				int r[256] = { 0 };
+				int s[256] = { 0 };
+				int pixelcount = 0;
+				/*局部處理*/
+				for (int j = -overside; j < overside; j++)
+				{
+					for (int i = -overside; i < overside; i++)
+					{
+						pre_p += j * ImageData2->Stride + i * 3;
+						int pixel = p[0] * 0.114 + p[1] * 0.587 + p[3] * 0.299;
+						r[pixel] += 1; 
+						pixelcount++;
+						pre_p = p;
+					}
+				}
+				//
+				int total = 0;
+				for (int y = 0; y < 256; y++) {
+					total += r[y];
+					s[y] = (total * 255) / pixelcount;
+				}
+				reg[0] = s[p[0]];
+				reg += 3;
+			}
+			p += 3;
+		}
+	}
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	reg = (Byte*)((Void*)ptr);
+	for (int y = 0; y < Image1->Height; y++)
+	{
+		for (int x = 0; x < Image1->Width; x++)
+		{
+			p[0] = reg[0];
+			p[1] = reg[0];
+			p[2] = reg[0];
+			p += 3;
+			reg += 3;
+
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData2);
+	//將影像顯示在pictureBox2
+	pictureBox2->Image = Image1;
 }
 };
 }
