@@ -440,7 +440,6 @@ namespace Project1 {
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::WindowsDefaultBounds;
 			this->Text = L"Image-Processing";
-			this->TopMost = true;
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
@@ -1115,11 +1114,10 @@ private: System::Void button10_Click(System::Object^  sender, System::EventArgs^
 	//Unlock處理完畢的像素範圍
 	Image1->UnlockBits(ImageData1);
 	//將影像顯示在pictureBox2
-	pictureBox3->Image = Image1;
+	pictureBox2->Image = Image1;
 }
 private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
 	//equalization
-	Byte* Reg_p;
 	ImageData2 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
 	//將int指標指向Image像素資料的最前面位置
 	IntPtr ptr = ImageData2->Scan0;
@@ -1127,7 +1125,7 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	//設定指標
 	p = (Byte*)((Void*)ptr);
 	float side = (float)numericUpDown4->Value;
-	int overside = 3;
+	int overside = 8;
 	Byte* reg;
 	for (int y = 0; y < Image1->Height; y++)
 	{
@@ -1136,7 +1134,7 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 			Byte* pre_p = p;
 			reg = p;
 			//巡迴每一像素
-			if (x < overside || y<overside || x>Image1->Width - overside || y>Image1->Height - overside) {
+			if (x < overside || y < overside || x > Image1->Width - overside || y > Image1->Height - overside) {
 				int pixel = 0;
 				reg[0] = pixel;
 				reg += 3;
@@ -1188,7 +1186,7 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	//Unlock處理完畢的像素範圍
 	Image1->UnlockBits(ImageData2);
 	//將影像顯示在pictureBox2
-	pictureBox2->Image = Image1;
+	pictureBox3->Image = Image1;
 }
 };
 }
