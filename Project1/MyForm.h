@@ -1,6 +1,7 @@
 #pragma once
 #include<math.h>
 #include<vector>
+#include<time.h>
 namespace Project1 {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -103,6 +104,16 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  button11;
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Panel^  panel2;
+	private: System::Windows::Forms::Button^  button12;
+	private: System::Windows::Forms::Button^  button13;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown5;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown6;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown7;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown8;
 
 
 
@@ -142,6 +153,16 @@ namespace Project1 {
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button13 = (gcnew System::Windows::Forms::Button());
+			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown7 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
@@ -152,6 +173,10 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -321,7 +346,7 @@ namespace Project1 {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox1->Location = System::Drawing::Point(10, 122);
+			this->pictureBox1->Location = System::Drawing::Point(9, 124);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(322, 242);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -418,7 +443,7 @@ namespace Project1 {
 			// 
 			this->panel1->AutoScroll = true;
 			this->panel1->Controls->Add(this->pictureBox3);
-			this->panel1->Location = System::Drawing::Point(794, 122);
+			this->panel1->Location = System::Drawing::Point(793, 124);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(450, 450);
 			this->panel1->TabIndex = 39;
@@ -426,10 +451,115 @@ namespace Project1 {
 			// panel2
 			// 
 			this->panel2->Controls->Add(this->pictureBox2);
-			this->panel2->Location = System::Drawing::Point(338, 122);
+			this->panel2->Location = System::Drawing::Point(337, 124);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(450, 450);
 			this->panel2->TabIndex = 40;
+			// 
+			// button12
+			// 
+			this->button12->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button12->Location = System::Drawing::Point(961, 12);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(130, 50);
+			this->button12->TabIndex = 41;
+			this->button12->Text = L"Gussian noise";
+			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
+			// 
+			// button13
+			// 
+			this->button13->Font = (gcnew System::Drawing::Font(L"Stencil", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button13->Location = System::Drawing::Point(961, 68);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(130, 50);
+			this->button13->TabIndex = 42;
+			this->button13->Text = L"Impulse noise";
+			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
+			// 
+			// numericUpDown5
+			// 
+			this->numericUpDown5->DecimalPlaces = 3;
+			this->numericUpDown5->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
+			this->numericUpDown5->Location = System::Drawing::Point(1234, 16);
+			this->numericUpDown5->Name = L"numericUpDown5";
+			this->numericUpDown5->Size = System::Drawing::Size(130, 22);
+			this->numericUpDown5->TabIndex = 43;
+			this->numericUpDown5->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// numericUpDown6
+			// 
+			this->numericUpDown6->DecimalPlaces = 3;
+			this->numericUpDown6->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
+			this->numericUpDown6->Location = System::Drawing::Point(1234, 40);
+			this->numericUpDown6->Name = L"numericUpDown6";
+			this->numericUpDown6->Size = System::Drawing::Size(130, 22);
+			this->numericUpDown6->TabIndex = 44;
+			this->numericUpDown6->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
+			this->label1->Location = System::Drawing::Point(1098, 18);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(123, 16);
+			this->label1->TabIndex = 45;
+			this->label1->Text = L"standard deviation";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
+			this->label2->Location = System::Drawing::Point(1098, 42);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(42, 16);
+			this->label2->TabIndex = 46;
+			this->label2->Text = L"mean";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
+			this->label3->Location = System::Drawing::Point(1098, 98);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(29, 16);
+			this->label3->TabIndex = 50;
+			this->label3->Text = L"salt";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
+			this->label4->Location = System::Drawing::Point(1098, 74);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(51, 16);
+			this->label4->TabIndex = 49;
+			this->label4->Text = L"pepper";
+			// 
+			// numericUpDown7
+			// 
+			this->numericUpDown7->DecimalPlaces = 3;
+			this->numericUpDown7->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
+			this->numericUpDown7->Location = System::Drawing::Point(1234, 96);
+			this->numericUpDown7->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 255, 0, 0, 0 });
+			this->numericUpDown7->Name = L"numericUpDown7";
+			this->numericUpDown7->Size = System::Drawing::Size(130, 22);
+			this->numericUpDown7->TabIndex = 48;
+			this->numericUpDown7->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// numericUpDown8
+			// 
+			this->numericUpDown8->DecimalPlaces = 3;
+			this->numericUpDown8->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 196608 });
+			this->numericUpDown8->Location = System::Drawing::Point(1234, 72);
+			this->numericUpDown8->Name = L"numericUpDown8";
+			this->numericUpDown8->Size = System::Drawing::Size(130, 22);
+			this->numericUpDown8->TabIndex = 47;
+			this->numericUpDown8->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// MyForm
 			// 
@@ -441,6 +571,16 @@ namespace Project1 {
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1407, 713);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->numericUpDown7);
+			this->Controls->Add(this->numericUpDown8);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->numericUpDown6);
+			this->Controls->Add(this->numericUpDown5);
+			this->Controls->Add(this->button13);
+			this->Controls->Add(this->button12);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->numericUpDown4);
@@ -477,6 +617,10 @@ namespace Project1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1241,6 +1385,173 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	//將影像顯示在pictureBox2
 	pictureBox1->Image = Image1;
 	pictureBox3->Image = Image3;
+}
+private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	//高斯雜訊 //產生方法(Box-Muller)
+	Image2 = gcnew Bitmap((int)(Image1->Width), (int)(Image1->Height));
+	rect2 = Rectangle(0, 0, Image2->Width, Image2->Height);
+	int ByteNumber_Width2 = Image2->Width * 3;
+	ImageData1 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	ImageData2 = Image2->LockBits(rect2, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資料的最前面位置
+	IntPtr ptr = ImageData1->Scan0;
+	IntPtr ptr2 = ImageData2->Scan0;
+	//掃描寬度-Byte資料寬度
+	BytesOfSkip = ImageData1->Stride - ByteNumber_Width;
+	int ByteOfSkip2 = ImageData2->Stride - ByteNumber_Width2;
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	p2 = (Byte*)((Void*)ptr2);
+	//standard deviation 從numeric工具取值，可自行設定數值
+	float std_dev = (float)numericUpDown5->Value;
+	//mean 從numeric工具取值，可自行設定數值
+	float mean = (float)numericUpDown6->Value;
+	//設定亂數
+	srand(time(NULL));
+	for (int j = 0; j < Image1->Height; j++) {
+		for (int i = 0; i < Image1->Width; i++) {
+			//變數宣告開始
+			float u = rand() / (double)RAND_MAX;
+			float v = rand() / (double)RAND_MAX;
+			float x = sqrt(-2 * log(u))*cos(2 * 3.14*v)*std_dev + mean;
+			//X = sqrt(-2*log(U1)) * cos(2pi*U2)
+			//可能有超過的部分 限制在255區間內
+			if (x > 127)
+			{
+				x = 127;
+			}
+			else if (x <= -128)
+			{
+				x = -128;
+			}
+			//判斷是否超過255 or 小於0
+			for (int i = 0; i < 3; i++) {
+				if ((p[i] + x) > 255) {
+					p2[i] = 255;
+				}
+				else if((p[i]+x)<0){
+					p2[i] = 0;
+				}
+				else
+				{
+					p2[i] = p[i] + x;
+				}
+			}
+			//高斯部分結束
+			//指到下一像素資訊
+			p += 3;
+			p2 += 3;
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData1);
+	Image2->UnlockBits(ImageData2);
+	//將影像顯示在picturebox2
+	pictureBox2->Image = Image2;
+}
+
+private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) {
+	//salt&pepper
+	//設置Image4的空間
+	Bitmap ^ Image4 = gcnew Bitmap((int)(Image1->Width),(int)(Image1->Height));
+	Rectangle rect4 = Rectangle(0, 0, Image4->Width, Image4->Height);
+	int ByteNumber_Width4 = Image4->Width * 3;
+	ImageData1 = Image1->LockBits(rect, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	Imaging::BitmapData^ ImageData4 = Image4->LockBits(rect4, System::Drawing::Imaging::ImageLockMode::ReadWrite, Image1->PixelFormat);
+	//將int指標指向Image像素資訊的最前面位置
+	IntPtr ptr = ImageData1->Scan0;
+	IntPtr ptr4 = ImageData4->Scan0;
+	//掃描寬度-Byte資料寬度
+	BytesOfSkip = ImageData1->Stride - ByteNumber_Width;
+	int ByteOfSkip4 = ImageData4->Stride - ByteNumber_Width4;
+	//設定指標
+	p = (Byte*)((Void*)ptr);
+	Byte* p4 = (Byte*)((Void*)ptr4);
+	//複製Image1的資料到Image4
+	for (int j = 0; j < Image1->Height; j++) {
+		for (int i = 0; i < Image1->Width; i++) {
+			p4[0] = p[0];
+			p4[1] = p[1];
+			p4[2] = p[2];
+			p += 3; p4 += 3;
+		}
+	}
+	int pepper, salt;
+	float pixel = Image1->Height*Image1->Width;
+	//各自處理約整張圖像訴的 value/100次
+	//可自行設定 pepper = pixel*0.1; 為處理10%部分
+	pepper = pixel * ((int)numericUpDown8->Value)/100;
+	salt = pixel * ((int)numericUpDown7->Value) / 100;
+	int black = 0;
+	int white = 255;
+	int x, y;
+	//建立指標陣列
+	bool *randmap = NULL;
+	//設定亂數
+	srand(time(NULL));
+	//設定起始點
+	int Image4_Index = 0;
+	int randmapIndex = 0;
+	//設定指標陣列大小，此為判斷是否處理過的陣列
+	randmap = new bool[Image4->Height * Image4->Width]{ true };
+	//salt&pepper 分開計算 各為10% 共用randmap
+	for (int j = 0; j < pepper; j++) {
+		//設定指標
+		p4 = (Byte*)((Void*)ptr4);
+		//取得隨機X Y
+		x = rand() % ImageData4->Width;
+		y = rand() % ImageData4->Height;
+		//計算新位置
+		Image4_Index = y * ImageData4->Stride + x * 3;
+		//指到陣列位置
+		randmapIndex = y * Image4->Width + x;
+		//p4指到新位置
+		p4 += (int)Image4_Index;
+		for (int i = 0; i <= 2; i++) {
+			bool temp = (randmap[randmapIndex]);
+			if (temp) {
+				//若未處理位置 設置p4為0
+				p4[i] = black;
+				if (i == 2) {
+					//等待3個像素處理完畢後 將此區設為使用過
+					randmap[randmapIndex] = false;
+				}
+			}
+			else break;
+		}
+	}
+	//salt&pepper 分開計算 各為10% 共用randmap
+	for (int j = 0; j < salt; j++) {
+		//設定指標
+		p4 = (Byte*)((Void*)ptr4);
+		//取得隨機X Y
+		x = rand() % ImageData4->Width;
+		y = rand() % ImageData4->Height;
+		//計算新位置
+		Image4_Index = y * ImageData4->Stride + x * 3;
+		//指到陣列位置
+		randmapIndex = y * Image4->Width + x;
+		//p4指到新位置
+		p4 += (int)Image4_Index;
+		for (int i = 0; i <= 2; i++) {
+			bool temp = (randmap[randmapIndex]);
+			if (temp) {
+				//若未處理位置 設置p4為0
+				p4[i] = white;
+				if (i == 2) {
+					//等待3個像素處理完畢後 將此區設為使用過
+					randmap[randmapIndex] = false;
+				}
+			}
+			else break;
+		}
+	}
+	//Unlock處理完畢的像素範圍
+	Image1->UnlockBits(ImageData1);
+	Image4->UnlockBits(ImageData4);
+	//將影像顯示在picturebox4
+	pictureBox3->Image = Image4;
 }
 };
 }
