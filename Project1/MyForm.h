@@ -255,7 +255,7 @@ namespace Project1 {
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Gray;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->pictureBox2->Location = System::Drawing::Point(34, 3);
+			this->pictureBox2->Location = System::Drawing::Point(3, 0);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(322, 242);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -443,13 +443,14 @@ namespace Project1 {
 			// 
 			this->panel1->AutoScroll = true;
 			this->panel1->Controls->Add(this->pictureBox3);
-			this->panel1->Location = System::Drawing::Point(793, 124);
+			this->panel1->Location = System::Drawing::Point(875, 124);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(450, 450);
 			this->panel1->TabIndex = 39;
 			// 
 			// panel2
 			// 
+			this->panel2->AutoScroll = true;
 			this->panel2->Controls->Add(this->pictureBox2);
 			this->panel2->Location = System::Drawing::Point(337, 124);
 			this->panel2->Name = L"panel2";
@@ -506,9 +507,9 @@ namespace Project1 {
 			this->label1->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
 			this->label1->Location = System::Drawing::Point(1098, 18);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(123, 16);
+			this->label1->Size = System::Drawing::Size(24, 16);
 			this->label1->TabIndex = 45;
-			this->label1->Text = L"standard deviation";
+			this->label1->Text = L"σ";
 			// 
 			// label2
 			// 
@@ -516,9 +517,9 @@ namespace Project1 {
 			this->label2->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
 			this->label2->Location = System::Drawing::Point(1098, 42);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(42, 16);
+			this->label2->Size = System::Drawing::Size(20, 16);
 			this->label2->TabIndex = 46;
-			this->label2->Text = L"mean";
+			this->label2->Text = L"m";
 			// 
 			// label3
 			// 
@@ -526,9 +527,9 @@ namespace Project1 {
 			this->label3->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
 			this->label3->Location = System::Drawing::Point(1098, 98);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(29, 16);
+			this->label3->Size = System::Drawing::Size(47, 16);
 			this->label3->TabIndex = 50;
-			this->label3->Text = L"salt";
+			this->label3->Text = L"salt(b)";
 			// 
 			// label4
 			// 
@@ -536,9 +537,9 @@ namespace Project1 {
 			this->label4->Font = (gcnew System::Drawing::Font(L"新細明體", 12));
 			this->label4->Location = System::Drawing::Point(1098, 74);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(51, 16);
+			this->label4->Size = System::Drawing::Size(68, 16);
 			this->label4->TabIndex = 49;
-			this->label4->Text = L"pepper";
+			this->label4->Text = L"pepper(a)";
 			// 
 			// numericUpDown7
 			// 
