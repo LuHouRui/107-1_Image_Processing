@@ -245,7 +245,7 @@ namespace Project1 {
 			this->pictureBox3->Location = System::Drawing::Point(3, 3);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(322, 242);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 14;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -476,7 +476,6 @@ namespace Project1 {
 			this->statusStrip1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
 			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -1182,8 +1181,9 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	{
 		for (int x = 0; x < Image1->Width; x++)
 		{
+			Byte* now_p = p;
 			//巡迴每一像素
-			if (x < overside || y < overside || x > Image1->Width - overside || y > Image1->Height - overside) {
+			if (x <= overside || x >= Image1->Width - overside|| y <= overside || y >= Image1->Height - overside) {
 				int pixel = 0;
 				reg[y][x] = pixel;
 			}
@@ -1193,11 +1193,11 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 				int s[256] = { 0 };
 				int pixelcount = 0;
 				/*局部處理*/
-				for (int j = -overside; j < overside; j++)
+				for (int j = -overside; j <= overside; j++)
 				{
-					for (int i = -overside; i < overside; i++)
+					for (int i = -overside; i <= overside; i++)
 					{
-						Byte* now_p = p;
+						
 						p += j * ImageData1->Stride + i * 3;
 						int pixel = p[0] * 0.114 + p[1] * 0.587 + p[3] * 0.299;
 						r[pixel] += 1; 
@@ -1211,7 +1211,8 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 					total += r[y];
 					s[y] = (total * 255) / pixelcount;
 				}
-				reg[y][x] = s[p[0]];
+				int pixel = p[0] * 0.114 + p[1] * 0.587 + p[3] * 0.299;
+				reg[y][x] = s[pixel];
 			}
 			p += 3;
 		}
