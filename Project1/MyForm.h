@@ -1495,6 +1495,9 @@ private: System::Void button13_Click(System::Object^  sender, System::EventArgs^
 	int randmapIndex = 0;
 	//設定指標陣列大小，此為判斷是否處理過的陣列
 	randmap = new bool[Image4->Height * Image4->Width]{ true };
+	for (int i = 0; i < Image4->Height * Image4->Width; i++) {
+		randmap[i] = true;
+	}
 	//salt&pepper 分開計算 各為10% 共用randmap
 	for (int j = 0; j < pepper; j++) {
 		//設定指標
