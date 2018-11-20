@@ -1,6 +1,7 @@
 ﻿  MyForm.cpp
-d:\dctenxen0621\data\school\107-1_image_processing\github\project1\myform.h(1121): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-d:\dctenxen0621\data\school\107-1_image_processing\github\project1\myform.h(1202): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-d:\dctenxen0621\data\school\107-1_image_processing\github\project1\myform.h(1214): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\aokisho\107-1_image_processing\project1\myform.h(1121): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\aokisho\107-1_image_processing\project1\myform.h(1202): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\aokisho\107-1_image_processing\project1\myform.h(1214): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   MyForm.obj : 發現 MSIL 模組。MSIL 的累加連結已停用。正在執行完整連結
-  Project1.vcxproj -> D:\DcTenXen0621\Data\School\107-1_Image_Processing\Github\x64\Debug\Project1.exe
+  Project1.vcxproj -> D:\AokiSho\107-1_Image_Processing\x64\Debug\Project1.exe
